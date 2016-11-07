@@ -21,7 +21,7 @@ $graph = "
 
         var options = {
           ';
-            if (!$this->responsive) {
+            if (! $this->responsive) {
                 $graph .= $this->width ? "width: $this->width," : '';
                 $graph .= $this->height ? "height: $this->height," : '';
             }
@@ -38,7 +38,7 @@ $graph = "
         chart.draw(data, options);
       }
     </script>
-    <div "; if (!$this->responsive) {
+    <div "; if (! $this->responsive) {
               $graph .= $this->width ? "style='width: $this->width'" : '';
           } $graph .= "><center><b style='font-family: Arial, Helvetica, sans-serif;font-size: 18px;'>$this->title</b><br><br></center></div>
     <div id='$this->id'></div>

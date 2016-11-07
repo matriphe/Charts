@@ -6,7 +6,7 @@ $max = count($this->values) >= 3 ? $this->values[2] : 100;
 $graph = "
 <div id=\"$this->id\" style=\" position: relative;
     ";
-        if (!$this->responsive) {
+        if (! $this->responsive) {
             if ($this->height) {
                 $graph .= 'height: '.$this->height.'px;';
                 $this->width = $this->height;

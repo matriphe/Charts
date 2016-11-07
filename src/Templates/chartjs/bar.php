@@ -2,7 +2,7 @@
 
 $graph = "
     <canvas id='$this->id' ";
-    if (!$this->responsive) {
+    if (! $this->responsive) {
         $graph .= $this->height ? "height='$this->height' " : '';
         $graph .= $this->width ? "width='$this->width' " : '';
     }
@@ -36,7 +36,7 @@ $graph = "
                 ]
             },
             options: {
-                responsive: '; $graph .= ($this->responsive or !$this->width) ? 'true' : 'false'; $graph .= ",
+                responsive: '; $graph .= ($this->responsive or ! $this->width) ? 'true' : 'false'; $graph .= ",
                 maintainAspectRatio: false,
                 title: {
                     display: true,
