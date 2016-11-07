@@ -16,7 +16,7 @@ $graph = "
             var chart = new Highcharts.Map({
                 chart: {
                         renderTo: \"$this->id\",
-                "; if (!$this->responsive) {
+                "; if (! $this->responsive) {
     $graph .= $this->width ? "width: $this->width," : '';
     $graph .= $this->height ? "height: $this->height," : '';
 }

@@ -2,7 +2,7 @@
 
 $graph = "
     <canvas id='$this->id' ";
-    if (!$this->responsive) {
+    if (! $this->responsive) {
         $graph .= $this->height ? "height='$this->height' " : '';
         $graph .= $this->width ? "width='$this->width' " : '';
     }
@@ -11,14 +11,14 @@ $graph = "
         var awesomechart = new AwesomeChart('$this->id');
             awesomechart.title = '$this->title';
             awesomechart.data = ["; foreach ($this->values as $dta) {
-                $graph .= $dta.',';
-            }
-            $graph .= "];
-            awesomechart.labels = ["; foreach ($this->labels as $label) {
+        $graph .= $dta.',';
+    }
+            $graph .= '];
+            awesomechart.labels = ['; foreach ($this->labels as $label) {
                 $graph .= '"'.$label.'",';
-            } 
-            $graph .= "];
-            awesomechart.colors = [";
+            }
+            $graph .= '];
+            awesomechart.colors = [';
                 if ($this->colors) {
                     foreach ($this->colors as $color) {
                         $graph .= '"'.$color.'",';
@@ -28,10 +28,10 @@ $graph = "
                         $graph .= "'".sprintf('#%06X', mt_rand(0, 0xFFFFFF))."',";
                     }
                 }
-            $graph .= "];
+            $graph .= '];
             awesomechart.randomColors = false;
             awesomechart.draw();
     </script>
-";
+';
 
 return $graph;

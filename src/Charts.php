@@ -92,8 +92,8 @@ class Charts extends Facade
             if ($file != '.' and $file != '..') {
                 $library = explode('.', $file)[0];
 
-                if (!in_array($library, $libraries)) {
-                    if (!$type or $type == explode('.', $file)[1]) {
+                if (! in_array($library, $libraries)) {
+                    if (! $type or $type == explode('.', $file)[1]) {
                         array_push($libraries, $library);
                     }
                 }
@@ -115,8 +115,8 @@ class Charts extends Facade
             if ($file != '.' and $file != '..') {
                 $type = explode('.', $file)[1];
 
-                if (!in_array($type, $types)) {
-                    if (!$library or $library == explode('.', $file)[0]) {
+                if (! in_array($type, $types)) {
+                    if (! $library or $library == explode('.', $file)[0]) {
                         array_push($types, $type);
                     }
                 }

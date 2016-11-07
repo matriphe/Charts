@@ -7,7 +7,7 @@ $graph = "
 
 <div id=\"$this->id\" style=\" position: relative;
     ";
-        if (!$this->responsive) {
+        if (! $this->responsive) {
             if ($this->height) {
                 $graph .= 'height: '.$this->height.'px;';
             }

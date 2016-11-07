@@ -227,7 +227,7 @@ class Chart
             $img_url = file_exists(public_path().'/vendor/consoletvs/charts/error.png') ? asset('/vendor/consoletvs/charts/error.png') : 'http://www.iconsfind.com/wp-content/uploads/2015/12/20151208_56663ed552e5d.png';
 
             $error = "<div style='position: relative;";
-            if (!$this->responsive) {
+            if (! $this->responsive) {
                 $error .= $this->height ? 'height: '.$this->height.'px' : '';
                 $error .= $this->width ? 'width: '.$this->width.'px' : '';
             }
